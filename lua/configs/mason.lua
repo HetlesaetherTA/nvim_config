@@ -5,7 +5,7 @@ require("lspconfig.configs")
 require("lspconfig")["rust_analyzer"].setup {
 }
 
-require("lspconfig").sumneko_lua.setup {
+require("lspconfig").lua_ls.setup {
   settings = {
           Lua = {
               diagnostics = {

@@ -1,4 +1,4 @@
-local nnoremap = require("prime.keymap").nnoremap
+local nnoremap = require("configs.keymap").nnoremap
 local builtin = require("telescope.builtin")
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
