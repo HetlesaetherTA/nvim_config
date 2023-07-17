@@ -2,7 +2,13 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'  -- Package manager
+  use 'wbthomason/packer.nvim'
+  use 'L3MON4D3/LuaSnip'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
   use 'folke/tokyonight.nvim' -- Colorscheme
   use 'williamboman/mason.nvim' -- LSP, DAP, Linter, Formatter
   use "williamboman/mason-lspconfig.nvim" -- Mason language server
@@ -22,10 +28,15 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
+  use('fatih/vim-go') -- Go language support
   use {                    -- Fuzzy finder
         "nvim-telescope/telescope.nvim", tag = '0.1.0',
         -- or                          , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim' } }
       }
+  -- use({
+	      -- "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*",
+  --       -- install jsregexp (optional!:).
+  --       run = "make install_jsregexp"
+-- }
 end)
-

@@ -9,7 +9,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.smartindent = true
 vim.opt.cmdheight=2
-vim.opt.mouse=a
+vim.opt.mouse='a'
 vim.opt.wrap = false
 vim.opt.number=true
 vim.opt.smarttab=true
@@ -17,3 +17,4 @@ vim.g.mapleader = " "
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
