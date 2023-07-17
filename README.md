@@ -11,3 +11,7 @@ Step 3<: Don't remember...
 
 Cheat sheet:
 :e $MYVIMRC
+
+Dependencies:
+Jedi
+go install golang.org/x/tools/gopls@latest
