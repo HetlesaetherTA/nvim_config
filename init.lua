@@ -1,6 +1,7 @@
 local g = vim.g
 
-require("constants")
+configs = "configs"
+
 require(configs)
 vim.lsp.client_is_stopped()
 
@@ -11,3 +12,5 @@ vim.g.tokyonight_transparent = true
 vim.opt.background = "dark"
 
 vim.cmd("colorscheme tokyonight")
+
+
