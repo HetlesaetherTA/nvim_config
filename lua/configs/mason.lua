@@ -1,5 +1,33 @@
 require("mason").setup()
 require("lspconfig.configs")
+local util = require "formatter.util"
+require("mason-lspconfig").setup {
+  ensure_installed = {"lua_ls", "gopls", "rust_analyzer", "jedi_language_server"},
+  automatic_installation = true,
+}
+
+
+require("lspconfig").gopls.setup{
+  cmd = {
+    os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
+    '-v',
+    '-rpc.trace',
+    os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls.log',
+  };
+  settings = {
+    gopls = {
+      -- experimentalWorkspaceModule = true
+      -- expandWorkspaceToModule = true,
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      codelenses = {
+        gc_details = true,
+      }
+    },
+  }
+}
 
 
 -- require("lspconfig").lua_ls.setup {
