@@ -1,7 +1,7 @@
 local lspconfig = require('lspconfig')
 local luasnip = require('luasnip')
 local cmp = require('cmp')
-
+local util = require "lspconfig/util"
 local lsp_defaults = lspconfig.util.default_config
 
 lsp_defaults.capabilities = vim.tbl_deep_extend(
@@ -10,6 +10,11 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
+lspconfig.gopls.setup {
+  cmd = {"gopls"},
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+}
 
 lsp_defaults.capabilities = vim.tbl_deep_extend(
   'force',
