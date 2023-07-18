@@ -23,3 +23,5 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
+
+nnoremap("<leader>rn", "<cmd>!%<CR>")
