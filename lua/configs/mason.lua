@@ -1,6 +1,5 @@
 require("mason").setup()
 require("lspconfig.configs")
-local util = require "formatter.util"
 require("mason-lspconfig").setup {
   ensure_installed = {"lua_ls", "gopls", "rust_analyzer", "jedi_language_server"},
   automatic_installation = true,
