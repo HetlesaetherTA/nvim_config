@@ -15,7 +15,7 @@ require("lspconfig").gopls.setup{
   };
   settings = {
     gopls = {
-      experimentalWorkspaceModule = true
+      experimentalWorkspaceModule = true,
       expandWorkspaceToModule = true,
       analyses = {
         unusedparams = true,
