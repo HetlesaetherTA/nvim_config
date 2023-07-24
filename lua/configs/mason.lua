@@ -5,6 +5,8 @@ require("mason-lspconfig").setup {
   automatic_installation = true,
 }
 
+-- local util = require("lspconfig.util")
+
 
 require("lspconfig").gopls.setup{
   cmd = {
@@ -15,8 +17,8 @@ require("lspconfig").gopls.setup{
   };
   settings = {
     gopls = {
-      experimentalWorkspaceModule = true,
-      expandWorkspaceToModule = true,
+      -- experimentalWorkspaceModule = true
+      -- expandWorkspaceToModule = true,
       analyses = {
         unusedparams = true,
       },
@@ -27,6 +29,27 @@ require("lspconfig").gopls.setup{
     },
   }
 }
+-- require("lspconfig").gopls.setup {
+--   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+--   filetypes = { "go", "gomod", "gowork", "gotmpl" },
+--   cmd = {
+--     os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
+--     '-v',
+--     '-rpc.trace',
+--     os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls.log',
+--   };
+--   settings = {
+--     experimentalWorkspaceModule = true,
+--     expandWorkspaceToModule = true,
+--     analyses = {
+--       unusedparams = true,
+--     },
+--     staticcheck = true,
+--     codelenses = {
+--       gc_details = true,
+--     }
+--   },
+-- }
 
 
 -- require("lspconfig").lua_ls.setup {
