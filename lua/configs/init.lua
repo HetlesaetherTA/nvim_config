@@ -1,3 +1,4 @@
+require("configs.vim-go")
 require("configs.set")
 require("configs.harpoon")
 require("configs.packer")

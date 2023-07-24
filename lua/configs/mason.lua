@@ -15,8 +15,8 @@ require("lspconfig").gopls.setup{
   };
   settings = {
     gopls = {
-      -- experimentalWorkspaceModule = true
-      -- expandWorkspaceToModule = true,
+      experimentalWorkspaceModule = true
+      expandWorkspaceToModule = true,
       analyses = {
         unusedparams = true,
       },
@@ -39,38 +39,21 @@ require("lspconfig").gopls.setup{
 --   }
 -- }
 
--- LSP's to automatically install (Mason)
-require("mason-lspconfig").setup {
-  ensure_installed = {"lua_ls", "gopls", "rust_analyzer", "jedi_language_server"},
-  automatic_installation = true,
+-- Lua LSP
+require("lspconfig").lua_ls.setup {
+  settings = {
+          Lua = {
+              diagnostics = {
+                  globals = { 'vim' }
+      }
+    }
+  }
 }
 
 -- Rust LSP, Linter & Formatter
 require("lspconfig")["rust_analyzer"].setup {
 }
 
--- Go LSP, Linter & Formatter
-require("lspconfig").gopls.setup{
-  cmd = {
-    os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
-    '-v',
-    '-rpc.trace',
-    os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls.log',
-  };
-  settings = {
-    gopls = {
-      -- experimentalWorkspaceModule = true
-      -- expandWorkspaceToModule = true,
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-      codelenses = {
-        gc_details = true,
-      }
-    },
-  }
-}
 
 -- Python LSP, Linter, AutoCorrect & Formatter
 require('lspconfig').jedi_language_server.setup {

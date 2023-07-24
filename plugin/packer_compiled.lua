@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\formatter.nvim",
-    url = "https://github.com/mhartington/formatter.nvim"
-  },
   harpoon = {
     loaded = true,
     path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
@@ -138,11 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  playground = {
-    loaded = true,
-    path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\playground",
-    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,

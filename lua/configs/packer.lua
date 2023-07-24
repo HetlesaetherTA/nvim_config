@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   use "lambdalisue/suda.vim" -- Force sudo
   use "vim-airline/vim-airline" -- Status bar
   use "preservim/tagbar" -- Tagbar for code navigation
-  use "mhartington/formatter.nvim" -- Formatter
+  -- use "mhartington/formatter.nvim" -- Formatter
   use ('mbbill/undotree') -- Undotree
   use 'nvim-lua/plenary.nvim' -- Plenary
   use 'tpope/vim-fugitive' -- Fugitive

@@ -14,7 +14,6 @@ vim.opt.wrap = false
 vim.opt.number=true
 vim.opt.smarttab=true
 vim.g.mapleader = " "
-
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-
+vim.g.go_asmfmt_autosave = 0
