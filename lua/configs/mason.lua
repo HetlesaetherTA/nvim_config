@@ -5,62 +5,48 @@ require("mason-lspconfig").setup {
   automatic_installation = true,
 }
 
--- local util = require("lspconfig.util")
-
-
-require("lspconfig").gopls.setup{
-  cmd = {
-    os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
-    '-v',
-    '-rpc.trace',
-    os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls.log',
-  };
-  settings = {
-    gopls = {
-      -- experimentalWorkspaceModule = true
-      -- expandWorkspaceToModule = true,
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-      codelenses = {
-        gc_details = true,
-      }
-    },
-  }
+require("lspconfig").gopls.setup {
+  -- cmd = {
+  --   os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
+  -- },
+  -- initializationOptions = {
+  --   codeAction = {
+  --     nameExtractVariable = "jls_extract_var",
+  --     nameExtractFunction = "jls_extract_def"
+  --   },
+  --   completion = {
+  --     disableSnippets = false,
+  --     resolveEagerly = false,
+  --     ignorePatterns = { }
+  --   },
+  --   diagnostics = {
+  --     enable = false,
+  --     didOpen = true,
+  --     didChange = true,
+  --     didSave = true
+  --   }
+  -- }
 }
--- require("lspconfig").gopls.setup {
---   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
---   filetypes = { "go", "gomod", "gowork", "gotmpl" },
---   cmd = {
---     os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
---     '-v',
---     '-rpc.trace',
---     os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls.log',
---   };
---   settings = {
---     experimentalWorkspaceModule = true,
---     expandWorkspaceToModule = true,
---     analyses = {
---       unusedparams = true,
---     },
---     staticcheck = true,
---     codelenses = {
---       gc_details = true,
---     }
---   },
--- }
-
-
--- require("lspconfig").lua_ls.setup {
---   settings = {
---           Lua = {
---               diagnostics = {
---                   globals = { 'vim' }
---       }
---     }
---   }
--- }
+  --   os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls',
+  --   -- '-v',
+  --   -- '-rpc.trace',
+  --   -- os.getenv("UserProfile"):gsub("\\", "/") .. '/go/bin/gopls.log',
+  -- },
+  -- settings = {
+  --   gopls = {
+  --     experimentalPostfixCompletions = true,
+  --     -- experimentalWorkspaceModule = true
+  --     -- expandWorkspaceToModule = true,
+  --     analyses = {
+  --       unusedparams = true,
+  --       shadow = true,
+  --     },
+  --     staticcheck = true,
+  --     codelenses = {
+  --       gc_details = true,
+  --     }
+  --   },
+  -- }
 
 -- Lua LSP
 require("lspconfig").lua_ls.setup {
