@@ -194,11 +194,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-go"] = {
-    loaded = true,
-    path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-go",
-    url = "https://github.com/fatih/vim-go"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "C:\\Users\\ThAH\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",

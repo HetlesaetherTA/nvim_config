@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon' -- Harpoon
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   -- use('nvim-treesitter/playground')
-  use('fatih/vim-go') -- Go language support
+  -- use('fatih/vim-go') -- Go language support
   use {                    -- Fuzzy finder
         "nvim-telescope/telescope.nvim", tag = '0.1.0',
         -- or                          , branch = '0.1.x',

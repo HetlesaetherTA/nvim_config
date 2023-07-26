@@ -1,7 +1,6 @@
 local lspconfig = require('lspconfig')
 local luasnip = require('luasnip')
 local cmp = require('cmp')
-local util = require "lspconfig/util"
 local lsp_defaults = lspconfig.util.default_config
 
 lsp_defaults.capabilities = vim.tbl_deep_extend(
